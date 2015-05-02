@@ -1,0 +1,14 @@
+<h1> Reviews </h1>
+
+<hr>
+
+<ul>
+
+   <% @reviews.each do |review| %>
+   <li><%= review.title %></li>
+   <li><%= review.body %></li>
+   <br>
+
+   <% end %>
+
+</ul>

@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.string :title
       t.text :body
-      t.belongs_to :movie
+      t.integer :movie_id
     end
   end
 end

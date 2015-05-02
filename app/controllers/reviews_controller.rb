@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+   def index
+      @reviews = Review.all
+   end
+
    def new
       @review = Review.new
    end
@@ -14,6 +18,6 @@ class ReviewsController < ApplicationController
 
    private
    def review_params
-      params.require(:review).permit(:title, :body)
+      params.require(:review).permit(:title, :body, :movie_id)
    end
 end

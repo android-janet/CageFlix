@@ -2,7 +2,7 @@
 
 <%= form_for @review do |f| %>
 
-<%= f.collection_select :movie, :movie_id, :id, :name %>
+<%= collection_select(:movie, :movie_id, Movie.all, :id, :name, prompt: true) %>
 
 <%= f.label :title %>
 <%= f.text_field :title %>
@@ -10,6 +10,6 @@
 <%= f.label :body %>
 <%= f.text_area :body %>
 
-<%= f.submit 'Submit Review' %>
+<%= f.submit 'Submit' %>
 
 <% end %>
