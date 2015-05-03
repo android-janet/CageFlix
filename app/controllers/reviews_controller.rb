@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
    def index
-      @reviews = Review.all
+      @reviews = Review.all.order(created_at: :desc)
    end
 
    def new
@@ -18,6 +18,6 @@ class ReviewsController < ApplicationController
 
    private
    def review_params
-      params.require(:review).permit(:title, :body, :movie_id)
+      params.require(:review).permit(:title, :body, :movie_id, :created_at)
    end
 end
