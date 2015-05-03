@@ -4,11 +4,36 @@
 
 <ul>
 
-   <% @reviews.each do |review| %>
-   <li><%= review.title %></li>
-   <li><%= review.body %></li>
-   <br>
+   <table>
+      <tr>
+         <th>
+            Movie
+         </th>
+         <th>
+            Reviewer
+         </th>
+         <th>
+            Date
+         </th>
+      </tr>
 
-   <% end %>
+
+      <% @reviews.each do |review| %>
+      <tr>
+         <td>
+            <%= review.title %>
+         </td>
+         <td>
+            BLAH
+         </td>
+
+         <td>
+            BLAH
+         </td>
+      </tr>
+      <% end %>
+   </table>
+
+<br>
 
 </ul>
