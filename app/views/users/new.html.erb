@@ -4,11 +4,11 @@
 
 <%= form_for @user do |user| %>
 
-<%= user.label :username %>
-<%= user.text_field :username %>
-
-<%= user.label :password %>
-<%= user.password_field :password %>
+<%= user.label :username %><br>
+<%= user.text_field :username %><br>
+<br>
+<%= user.label :password %><br>
+<%= user.password_field :password %><br>
 
 <%= user.submit 'Sign Up' %>
 
