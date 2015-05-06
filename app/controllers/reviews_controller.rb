@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
 
    def create
       @review = Review.new(review_params)
-      @user = current_user
+      @review.user_id = current_user.id
       if @review.save
          redirect_to reviews_path
       else
@@ -19,6 +19,6 @@ class ReviewsController < ApplicationController
 
    private
    def review_params
-      params.require(:review).permit(:title, :body, :movie_id, :user_id)
+      params.require(:review).permit(:title, :body)
    end
 end

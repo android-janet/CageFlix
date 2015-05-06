@@ -5,7 +5,6 @@ class CreateReviews < ActiveRecord::Migration
       t.text :body
       t.belongs_to :movie
       t.date :created_at
-      t.belongs_to :user
     end
   end
 end
