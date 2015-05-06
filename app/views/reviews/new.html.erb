@@ -5,10 +5,8 @@
 
 <% if :movie_id == nil %>
 
-<%= collection_select(:movie, :movie_id, Movie.all, :id, :name, prompt: true) %>
-
 <% else %>
-
+<%= collection_select(:movie, :movie_id, Movie.all, :id, :name, prompt: true) %>
 <% end %>
 <br>
 <br>
